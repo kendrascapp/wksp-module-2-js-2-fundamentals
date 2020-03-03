@@ -16,23 +16,24 @@ For example, all objects have `toString` and `valueOf` methods.
 
 ```js
 let num = 3;
-num.toString();
+num.toString();   /* this is how you can convert to strings *// "3"
 
-let bool = true;
+let bool = true;  /* turns the word 'true' into a string */ / "true"
 bool.toString();
 
-let str = 'hello';
+let str = 'hello';  /* "hello" */
 str.toString();
 
-let arr = [1, 2, 'three'];
+let arr = [1, 2, 'three']; /* "1,2, three" */
 arr.toString();
 
-let dip = {value: 3};
+let dip = {value: 3};  
 dip.toString();
 ```
 
-Let's look at the examples above again using `valueOf`.
+Let's look at the examples above again using `valueOf`.  
 
+/* methods are functions INSIDE of each data value. Every data value has innate methods you can call */
 ---
 
 - When programming with JavaScript we don't generally care that booleans, numbers and functions are objects. Their methods aren't that useful most of the time.
@@ -47,12 +48,12 @@ _We'll talk more about objects and methods later when we talk about creating our
 
 Strings have a bunch of methods and properties that will be immediately useful. 😉
 
-- `.length`
+- `.length`   
 - `.replace()`
-- `.slice()`
-- `.concat()`
-- `split()`
-- `indexOf()`
+- `.slice()`    
+- `.concat()`   (combine)
+- `.split()`     
+- `.indexOf()`  (give you position in array) 
 
 📝 None of these methods **mutate** the string; strings are **immutable**.
 📝 They return a new version of the string which you can then work with as you like.
@@ -67,7 +68,7 @@ Calling `.length` returns the length of the sequence.
 // Example
 const sentiment = 'I love programming';
 sentiment.length;
-
+// answer: 18 (there's 18 characters to this string)
 ```
 
 ---
@@ -81,7 +82,8 @@ It takes 2 parameters, the value to replace and the new value.
 ```js
 // Example
 const sentiment = 'I love programming';
-
+// sentiment2.replace('programming', 'bacon'):
+//answer: "i love bacon"
 ```
 
 ---
@@ -95,7 +97,9 @@ const sentiment = 'I love programming';
 ```js
 // Example
 const sentiment = 'I love programming';
-
+// s2.slice(2, 6); 
+//answer: "love: 
+// you have to count the characters starting at 0 and spaces count as a character.  
 ```
 
 ---
@@ -108,7 +112,11 @@ The `.concat()` method is used to join two or more strings.
 // Example
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
-
+// const new1 = partOne.concat(partTwo);
+// const2 new2 = `${partOne}${partTwo}`
+// partOne.concat(partTwo);
+// as soon as you put a ` it is a string literal and can accept JS
+// to put JS in you need to do `${stuff u want to add})
 ```
 
 ---
@@ -120,7 +128,9 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
-
+// truth.split('') (if you split on nothing it will take the string and put it into indvidual letters)
+// truth.split(' ') if you split on a space it will give tou the words spaced out
+//splitting on a particular character will remove that character 
 ```
 
 ---
@@ -134,6 +144,8 @@ This method returns -1 if the value to search for never occurs.
 ```js
 // Example
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
+// yodaSpeak.indexOf('Anger') (have to capitalize the word you are looking for)
+//index of is 56 (the position at which the word starts.. so in this case character 56)
 
 ```
 

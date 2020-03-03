@@ -24,6 +24,7 @@ const words = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'
 
 words.forEach(function(word) {
     // do something
+    consoe.log(word);
 });
 
 ```

@@ -9,8 +9,16 @@
 // 371 is an Armstrong number since 3*3 + 7*3 + 1*3 = 371.
 
 let armstrongNumbers = [];
-
-// write your loop here...
+for (let i = 0; i < 1000; i++) {      // start your loop with 'for' and put the number start and number end and i++
+    let digits = i.toString().split('');    
+    let sum = 0;
+    digits.forEach(function(digit) {
+        sum += Number(digit) * Number(digit) * Number(digit);       //this means the numbers shown have to follow this formula 
+    });
+    if (sum === i) {
+        armstrongNumbers.push(i);
+    }
+}
 
 
 console.log(armstrongNumbers);

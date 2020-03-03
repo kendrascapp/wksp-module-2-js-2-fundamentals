@@ -5,9 +5,15 @@
 
 // Q5
 // Returns a new list with all the elements of lst that are length greater than 5
+// create a function to check # in given string 
+// tell keepLong to check # of character in each string in the array 
+
 function keepLong(lst) {
-    // lst is an array of strings
-    
+let greaterThan5 = function(givenString) {
+    return (givenString.length > 5);
+}  
+let names = lst.filter(greaterThan5);
+return names;
 }
 // -------------------------------------------------------------------------
 console.log('Q5 keepLong()', keepLong(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash']));
